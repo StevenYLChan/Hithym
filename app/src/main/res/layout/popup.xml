@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/popup_id"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F44336"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+    <ImageButton
+        android:id="@+id/retry_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/replay_button_layout"
+        android:hapticFeedbackEnabled="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Game Over"
+        android:id="@+id/game_over"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="50dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        />
+    <!--
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/home_button_layout"
+        android:hapticFeedbackEnabled="true"
+        android:id="@+id/home_button"
+        android:onClick="home_pressed"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/retry_button"
+        android:layout_toStartOf="@+id/retry_button"
+        android:layout_gravity="center_vertical"/>
+        -->
+</RelativeLayout>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="theloaferlounge.hithym.Game"
+
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/linearl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:layout_above="@+id/tbdisplay"
+        >
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/tlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/submit_button">
+
+        <TableRow
+            >
+
+            <ImageButton
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/red_button_layout"
+                android:hapticFeedbackEnabled="true"
+                android:onClick="one_button"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/green_button_layout"
+                android:hapticFeedbackEnabled="true"
+                android:onClick="two_button"
+                android:scaleType="fitXY"/>
+        </TableRow>
+
+        <TableRow>
+
+            <ImageButton
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_button_layout"
+                android:hapticFeedbackEnabled="true"
+                android:onClick="three_button"
+                android:scaleType="fitXY"
+                />
+
+            <ImageButton
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_button_layout"
+                android:hapticFeedbackEnabled="true"
+                android:onClick="four_button"
+                android:scaleType="fitXY"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tbdisplay"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/counter"
+        android:background="#d9000000"
+        >
+
+        <ImageView
+            android:id="@+id/flash_screen_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#96ffffff"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/flash_powerup_morph"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:visibility="gone"
+            />
+
+        <TableRow
+            android:id="@+id/tbRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+        </TableRow>
+    </TableLayout>
+
+    <ImageButton
+        android:id="@+id/submit_button"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/submit_button_layout"
+        android:hapticFeedbackEnabled="true"
+        android:onClick="submit_button"
+        android:scaleType="fitCenter"
+
+        />
+
+    <ImageButton
+        android:id="@+id/pause_button"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tlayout"
+        android:layout_toEndOf="@+id/submit_button"
+        android:layout_toRightOf="@+id/submit_button"
+        android:background="@drawable/pause_button_layout"
+        android:hapticFeedbackEnabled="true"
+        android:onClick="pause_pressed"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="100sp"
+        />
+
+    <ImageView
+        android:id="@+id/flash_powerup_multiplier"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tbdisplay"
+        android:background="#ffffff"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/inputstar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tbdisplay"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <com.daasuu.ahp.AnimateHorizontalProgressBar
+        android:id="@+id/animate_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tbdisplay"
+        app:ahp_backgroundColor="@color/colorPrimaryDark"
+        app:ahp_progressColor="@color/colorAccent"/>
+
+    <ImageView
+        android:id="@+id/flash_powerup_time"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@+id/tbdisplay"
+        android:background="#ffffff"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="sans-serif-light"
+        android:paddingRight="4dp"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:textSize="20sp"/>
+
+    <RelativeLayout
+        android:id="@+id/powerup_bar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/tlayout"
+        android:layout_below="@id/animate_progress_bar">
+
+        <ImageButton
+            android:id="@+id/powerup_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:clickable="false"
+            android:onClick="powerup_time_pressed"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/powerup_time_deactivated"
+            />
+
+        <ImageButton
+            android:id="@+id/powerup_morph"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@id/powerup_time"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:clickable="false"
+            android:onClick="powerup_morph_pressed"
+            android:scaleType="centerCrop"
+            android:src="@drawable/powerup_morph_deactivated"
+
+            />
+
+        <ImageButton
+            android:id="@+id/powerup_multiplier"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/powerup_time"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:clickable="false"
+            android:onClick="powerup_multiplier_pressed"
+            android:scaleType="centerCrop"
+            android:src="@drawable/powerup_multiplier_deactivated125"
+            />
+
+        <TextView
+            android:id="@+id/powerup_morph_inventory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/powerup_morph"
+            android:text="0"
+            android:textSize="30sp"
+
+            />
+
+        <TextView
+            android:id="@+id/powerup_time_inventory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/powerup_time"
+            android:layout_alignStart="@+id/powerup_time"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:text="0"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/powerup_multiplier_inventory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/powerup_multiplier"
+            android:text="0"
+            android:textSize="30sp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/time_saved_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/animate_progress_bar"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#76FF03"
+        android:textSize="20sp"/>
+
+
+</RelativeLayout>
